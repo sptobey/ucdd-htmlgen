@@ -54,27 +54,27 @@ lib.generateTable = function(twoDimensionalArrayOfText) {
 }
 
 lib.generateHyperLink = function(url, text) {
-    return "not yet implemented"
+    return "<a href=\"" + url + ">" + text + "</a>"
 }
 
 lib.generateFormTextField = function(name) {
-    return "not yet implemented"
-}
-
-lib.generateFormTextField = function(name) {
-    return "not yet implemented"
+    return "<input type=\"text\" name=\"" + name + "\">"
 }
 
 lib.generateFormTextFieldWithLabel = function(name, label) {
-    return "not yet implemented"
+    return "<label>" + label + "</label>" + " " + "<input type=\"text\" name=\"" + name + "\">"
 }
 
 lib.generateDropdownList = function(arrayOfValues, arrayOfText) {
-    return "not yet implemented"
+    var outStr = "<select>\n"
+    for (var i = 0; i < arrayOfValues.length; i++) {
+		outStr = outStr + "\t<option value=\"" + arrayOfValues[i] + "\">" + arrayOfText[i] + "</option>\n"
+	}
+    return outStr + "</select>"
 }
 
 lib.generateYoutubeVideoEmbeddableFrame = function(width, height, videoId, allowfullscreen) {
-    return "not yet implemented"
+    return "<iframe width=\"" + width + "\" height=\"" + height + "\" src=//www.youtube.com/embed/" + videoId + " " + allowfullscreen + "></iframe>"
 }
 
 module.exports = lib
