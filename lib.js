@@ -74,7 +74,8 @@ lib.generateDropdownList = function(arrayOfValues, arrayOfText) {
 }
 
 lib.generateYoutubeVideoEmbeddableFrame = function(width, height, videoId, allowfullscreen) {
-    return "<iframe width=\"" + width + "\" height=\"" + height + "\" src=//www.youtube.com/embed/" + videoId + " " + allowfullscreen + "></iframe>"
+	var full = allowfullscreen ? " allowfullscreen" : ""
+    return "<iframe width=\"" + width + "\" height=\"" + height + "\" src=//www.youtube.com/embed/" + videoId + full + "></iframe>"
 }
 
 module.exports = lib
